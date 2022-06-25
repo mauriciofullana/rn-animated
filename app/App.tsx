@@ -1,7 +1,12 @@
 import React, {FunctionComponent} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {HomeScreen, OpacityScreen, TranslateScreen} from './src/screens';
+import {
+  HomeScreen,
+  OpacityScreen,
+  ScaleScreen,
+  TranslateScreen,
+} from './src/screens';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +21,7 @@ const App: FunctionComponent = () => {
         />
         <Stack.Screen name="Opacity" component={OpacityScreen} />
         <Stack.Screen name="Translate" component={TranslateScreen} />
+        <Stack.Screen name="Scale" component={ScaleScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -21,6 +21,11 @@ const Home: FunctionComponent = () => {
         onPress={() => handleNavigation('Translate')}>
         <Text style={styles.actionText}>TRANSLATE</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.action}
+        onPress={() => handleNavigation('Scale')}>
+        <Text style={styles.actionText}>SCALE</Text>
+      </TouchableOpacity>
     </View>
   );
 };
