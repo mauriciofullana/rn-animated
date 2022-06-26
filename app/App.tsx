@@ -2,6 +2,7 @@ import React, {FunctionComponent} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {
+  AbsoluteScreen,
   HomeScreen,
   OpacityScreen,
   ScaleScreen,
@@ -24,6 +25,7 @@ const App: FunctionComponent = () => {
         <Stack.Screen name="Translate" component={TranslateScreen} />
         <Stack.Screen name="Scale" component={ScaleScreen} />
         <Stack.Screen name="WidthHeight" component={WidthHeigthScreen} />
+        <Stack.Screen name="Absolute" component={AbsoluteScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -2,7 +2,13 @@ import {useNavigation} from '@react-navigation/native';
 import React, {FunctionComponent} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-type Screen = 'Home' | 'Opacity' | 'Translate' | 'Scale' | 'WidthHeight';
+type Screen =
+  | 'Home'
+  | 'Opacity'
+  | 'Translate'
+  | 'Scale'
+  | 'WidthHeight'
+  | 'Absolute';
 
 const Home: FunctionComponent = () => {
   const navigation = useNavigation();
@@ -30,6 +36,11 @@ const Home: FunctionComponent = () => {
         style={styles.action}
         onPress={() => handleNavigation('WidthHeight')}>
         <Text style={styles.actionText}>Widt & Height</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.action}
+        onPress={() => handleNavigation('Absolute')}>
+        <Text style={styles.actionText}>Absolute</Text>
       </TouchableOpacity>
     </View>
   );
