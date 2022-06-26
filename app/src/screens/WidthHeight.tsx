@@ -2,29 +2,20 @@ import React, {FunctionComponent, useRef} from 'react';
 import {Animated, StyleSheet, Text, View} from 'react-native';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 
-const Scale: FunctionComponent = () => {
-  const animation = useRef(new Animated.Value(1)).current;
+const WidthHeight: FunctionComponent = () => {
+  const animation = useRef(new Animated.Value(150)).current;
 
-  const animatedStyle = {transform: [{scale: animation}]};
+  const animatedStyle = {
+    width: animation,
+    height: animation,
+  };
 
   const startAnimation = () => {
     Animated.timing(animation, {
-      toValue: 2,
-      useNativeDriver: true,
-      duration: 2000,
-    }).start(() => {
-      Animated.timing(animation, {
-        toValue: -1,
-        useNativeDriver: true,
-        duration: 2000,
-      }).start(() => {
-        Animated.timing(animation, {
-          toValue: 1,
-          useNativeDriver: true,
-          duration: 2000,
-        }).start();
-      });
-    });
+      toValue: 300,
+      duration: 1500,
+      useNativeDriver: false,
+    }).start();
   };
 
   return (
@@ -51,12 +42,10 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     backgroundColor: 'green',
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
   text: {
     color: '#FFF',
   },
 });
 
-export default Scale;
+export default WidthHeight;

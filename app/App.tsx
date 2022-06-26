@@ -6,6 +6,7 @@ import {
   OpacityScreen,
   ScaleScreen,
   TranslateScreen,
+  WidthHeigthScreen,
 } from './src/screens';
 
 const Stack = createStackNavigator();
@@ -22,6 +23,7 @@ const App: FunctionComponent = () => {
         <Stack.Screen name="Opacity" component={OpacityScreen} />
         <Stack.Screen name="Translate" component={TranslateScreen} />
         <Stack.Screen name="Scale" component={ScaleScreen} />
+        <Stack.Screen name="WidthHeight" component={WidthHeigthScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
